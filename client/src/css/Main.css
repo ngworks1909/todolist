@@ -1,0 +1,10 @@
+.main{
+    top: 70px;
+    position: relative;
+    height: calc(100dvh - 70px);
+    width: 100dvw;
+    padding: 10px 20px 0 20px;
+}
+.darkMode.main{
+    background-color: #080c1ff1;
+}

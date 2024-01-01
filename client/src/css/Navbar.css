@@ -1,0 +1,104 @@
+.nav-bar{
+    position: fixed;
+    height: 70px;
+    background-color: white;
+    width: 100%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.384);
+    z-index: 10;
+  }
+.app-logo-link{
+    gap: 0.7rem;
+}
+.app-logo-image{
+    height: 30px;
+    padding-left: 20px;
+}
+.app-logo-text{
+    font-size: 25px;
+    font-weight: 500;
+}
+.nav-bar a{
+    color: rgba(0, 0, 0, 0.782);
+    text-decoration: none;
+}
+.menu-list{
+    padding-right: 20px;
+    
+}
+.menu-list .menu-icon-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+}
+.menu-icon{
+    width: 25px;
+    height: 25px;
+    color: rgba(0, 0, 0, 0.782);
+}
+
+.menu-list .menu-icon-button:hover{
+    background-color: rgba(43, 41, 41, 0.144);
+    transition: .2s ease-in-out;
+}
+
+.box{
+    position: absolute;
+    width: 180px;
+    background-color: #286077 ;
+    z-index: 1;
+    right: 20px;
+    top: 50px;
+    gap: 1px;
+    border-radius: 10px;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .box button{
+    background-color: transparent;
+    padding: 15px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.303);
+  }
+  .box button:hover{
+    transition: .28s ease-in-out;
+    background-color: #082f3e ;
+  } 
+  
+  .menu-icon-button:hover .box{
+    text-wrap: nowrap;
+    visibility: visible;
+    transition: .5s ease-in-out;
+  }
+
+  .hidden-icon{
+    height: 20px;
+    width: 20px;
+  }
+
+.darkMode.nav-bar{
+    background-color: #080c1ffe;
+    box-shadow: 2px 2px 6px rgba(99, 98, 98, 0.384);
+}
+.darkMode .app-logo-text{
+    color: white;
+}
+.darkMode .menu-icon{
+    color: white;
+}
+.darkMode .menu-list .menu-icon-button:hover{
+    background-color: rgba(255, 255, 255, 0.426);
+}
+.darkMode .box{
+    background-color: white;
+    box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.782);
+}
+.darkMode .box button{
+    color: black;
+}
+.darkMode .box button:hover{
+    background-color: #acafb0a5;
+}
