@@ -7,7 +7,7 @@ const app = express();
 const port = 3001;
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://ngworks-notes.vercel.app"],
+    origin: ["http://localhost:3000", "https://ngworks-todos.vercel.app"],
     credentials: true,
   })
 );
