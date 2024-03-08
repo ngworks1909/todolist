@@ -3,12 +3,11 @@ import { createContext, useState } from "react";
 export const TodoContext = createContext();
 
 export const TodoContextProvider = ({ children }) => {
-  const host = "http://localhost:3001";
   const todoInitial = [];
   const [todos, setTodos] = useState(todoInitial);
 
   const addTodo = async (title) => {
-    const response = await fetch(`${host}/api/todo/createTodo`, {
+    const response = await fetch(`https://todobackend-five.vercel.app/api/todo/createTodo`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +24,7 @@ export const TodoContextProvider = ({ children }) => {
   };
 
   const getTodos = async () => {
-    const response = await fetch(`${host}/api/todo/fetchAllTodos`, {
+    const response = await fetch(`https://todobackend-five.vercel.app/api/todo/fetchAllTodos`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +40,7 @@ export const TodoContextProvider = ({ children }) => {
   };
 
   const deleteTodo = async (id) => {
-    const response = await fetch(`${host}/api/todo/deleteTodo/${id}`, {
+    const response = await fetch(`https://todobackend-five.vercel.app/api/todo/deleteTodo/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +64,7 @@ export const TodoContextProvider = ({ children }) => {
   };
 
   const updateTodo = async(id, title) =>{
-    const response = await fetch(`${host}/api/todo/updateTodo/${id}`, {
+    const response = await fetch(`https://todobackend-five.vercel.app/api/todo/updateTodo/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

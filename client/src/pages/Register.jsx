@@ -1,9 +1,8 @@
-import React,{useContext, useState} from 'react'
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import '../css/Login.css'
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Alert from '../components/Alert';
 import { AuthContext } from '../context/AuthContext';
+import '../css/Login.css';
 
 
 export default function Register({setLogin}) {
@@ -17,7 +16,7 @@ export default function Register({setLogin}) {
         const name = e.target[0].value;
         const email = e.target[1].value;
         const password = e.target[2].value;
-        const response = await fetch(`http://localhost:3001/api/auth/createUser`, {
+        const response = await fetch(`https://todobackend-five.vercel.app/api/auth/createUser`, {
         method: "POST",
         headers: {
               "Content-Type": "application/json",
